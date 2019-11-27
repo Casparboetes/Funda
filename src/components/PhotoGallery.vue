@@ -16,6 +16,10 @@ import debounce from "lodash/debounce";
 
 const STORE_MODULE_NAME = "detailPage";
 
+// Note: I intended to take the images from the store on a later time.
+// Could not make the correct filter in time. 
+// I think I have a solution now, which I will try to implement tonight.
+
 export default {
   name: "PhotoGallery",
   data: () => ({
