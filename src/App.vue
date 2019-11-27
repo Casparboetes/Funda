@@ -3,7 +3,6 @@
     <NavBar />
     <ObjectHeader />
     <PhotoGallery />
-
     <div class="container">
       <Characteristics />
       <Broker />
