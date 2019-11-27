@@ -18,11 +18,11 @@ export default {
 
       const flattenArray = [].concat.apply([], mediaItems);
 
-      const arrayOfUrlSizeSix = flattenArray
+      const arrayOfUrlsCategorySix = flattenArray
         .filter(cat => cat.Category === 6)
         .map(item => item.Url);
 
-      return arrayOfUrlSizeSix;
+      return arrayOfUrlsCategorySix;
     }
   },
   actions: {
