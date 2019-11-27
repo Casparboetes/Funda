@@ -97,7 +97,7 @@ export default {
 .main-info {
   border: 1px #304455 solid;
   width: 750px;
-  height: 750px;
+  height: auto;
   margin: 35px 0;
   padding: 0 15px 15px 15px;
 }

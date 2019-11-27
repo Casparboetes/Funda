@@ -19,25 +19,17 @@ const STORE_MODULE_NAME = "detailPage";
 export default {
   name: "PhotoGallery",
   data: () => ({
-    images: [
-      "http://cloud.funda.nl/valentina_media/121/013/436_groot.jpg",
-      "http://cloud.funda.nl/valentina_media/121/013/437_groot.jpg",
-      "http://cloud.funda.nl/valentina_media/121/013/438_groot.jpg",
-      "http://cloud.funda.nl/valentina_media/121/013/439_groot.jpg",
-      "http://cloud.funda.nl/valentina_media/121/013/440_groot.jpg",
-      "http://cloud.funda.nl/valentina_media/121/013/441_groot.jpg"
-    ],
     currentIndex: 0
   }),
   computed: {
     ...mapGetters({
-      allData: `${STORE_MODULE_NAME}/media`
+      images: `${STORE_MODULE_NAME}/images`
     }),
     currentImg: function() {
-      return this.images[Math.abs(this.currentIndex) % this.images.length];
+      return this.images[Math.abs(this.currentIndex + 1) % this.images.length];
     },
     secondImg: function() {
-      return this.images[Math.abs(this.currentIndex + 1) % this.images.length];
+      return this.images[0];
     }
   },
   methods: {
@@ -58,6 +50,7 @@ export default {
   .image-container {
     display: inline-block;
     padding-left: 135px;
+
     .currentImg {
       width: 100%;
       max-width: 580px;

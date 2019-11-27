@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scopred>
+<style lang="scss">
 .nav-bar {
   height: 52px;
   background-color: #f7a100;

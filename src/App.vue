@@ -3,7 +3,6 @@
     <NavBar />
     <ObjectHeader />
     <PhotoGallery />
-
     <div class="container">
       <Characteristics />
       <Broker />
@@ -51,9 +50,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #304455;
-  width: 1440px;
+  max-width: 1440px;
+  margin: auto;
 }
-
 * {
   box-sizing: border-box;
 }

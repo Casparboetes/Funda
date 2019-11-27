@@ -8,30 +8,22 @@ export default {
     detailPageData: null
   },
   getters: {
-    allData: state => state.detailPageData
-    // Todo 26/11/2019: make filter from media Items.
+    allData: state => state.detailPageData,
+    images: state => {
+      const indices = [...Array(100).keys()];
 
-    // media: state => {
-    //   const ids = [...Array(100).keys()];
+      const mediaItems = state.detailPageData.Media.filter(media =>
+        indices.includes(media.IndexNumber)
+      ).map(item => item.MediaItems);
 
-    //   const filteredArrayOnMedia = state.detailPageData.Media.filter(
-    //     mediaItems => ids.includes(mediaItems.IndexNumber)
-    //   );
+      const flattenArray = [].concat.apply([], mediaItems);
 
-    //   let marvelHeroes = filteredArrayOnMedia.map(function(item) {
-    //     return item.MediaItems;
-    //   });
+      const arrayOfUrlSizeSix = flattenArray
+        .filter(cat => cat.Category === 6)
+        .map(item => item.Url);
 
-    //   let heros = marvelHeroes.map(function(item) {
-    //     return item.filter(function(cat) {
-    //       return cat.Category === 6;
-    //     });
-    //   });
-
-    //   More code here.
-
-    //   return heros;
-    // }
+      return arrayOfUrlSizeSix;
+    }
   },
   actions: {
     async getDetailPageData({ commit }) {
