@@ -27,7 +27,7 @@ export default {
   },
   actions: {
     async getDetailPageData({ commit }) {
-      // CORS ERROR WAS RESSPONSIBLE FOR KILING THIS ACTION
+      // CORS ERROR WAS RESPONSIBLE FOR KILLING THIS ACTION
       const mockResponse = config.default;
 
       commit("SET_LOADING_DATA", null);
